@@ -7,7 +7,7 @@
   style {
     font-family: monospace; /*try `fantasy` for a special treat.*/
     padding: 50px;
-    font-size: 22px;
+    font-size: 16px;
     white-space: pre;
     line-height: 1.4;
     color: #101;
@@ -17,17 +17,20 @@
     outline: 0;
   }
 
+  style::before {
+    content: '<style contenteditable>';
+  }
+
   style:after {
     content: "<\/style>";
     display: block;
   }
 
-  style::before {
-    content: '<style contenteditable>';
-  }
-
   /* prior art:
      http://annevankesteren.nl/test/contenteditable-style.htm
      http://mathiasbynens.be/demo/css-hidden-elements
+
+     Quine:
+     http://en.wikipedia.org/wiki/Quine_(computing)
   */
 </style>
